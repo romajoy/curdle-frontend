@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: #9b7a16;
+  background-color: #d29811;
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
@@ -73,7 +73,7 @@ h1 {
 }
 
 .letter {
-  border-bottom: 3px solid #daa921;
+  border-bottom: 3px solid #eac315;
   display: inline-flex;
   font-size: 30px;
   align-items: center;
