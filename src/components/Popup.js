@@ -7,11 +7,11 @@ const Popup = ({correctLetters, wrongLetters, selectedWord, setPlayable, playAga
     let playable = true;
 
     if (checkWin(correctLetters, wrongLetters, selectedWord) === 'win') {
-        finalMessage = 'Congratulations! You won!';
+        finalMessage = 'Congratulations! YOU FIGURED OUT THE CHEESE!!';
         playable = false;
     } else if (checkWin(correctLetters, wrongLetters, selectedWord) === 'lose') {
-        finalMessage = 'Unfortunately you lost.' ;
-        finalMessageRevealWord = `... the word was ${selectedWord}`;
+        finalMessage = 'YOU CUT THE CHEESE!!!' ;
+        finalMessageRevealWord = `... the cheese was ${selectedWord}`;
         playable = false;
     }
 
@@ -21,7 +21,7 @@ const Popup = ({correctLetters, wrongLetters, selectedWord, setPlayable, playAga
     <div className="popup-container" style={finalMessage !== '' ? {display: 'flex'} : {}}>
     <div className="popup">
       <h2>{finalMessage}</h2>
-      <h3>{finalMessageRevealWord}</h3>
+      <h4>{finalMessageRevealWord}</h4>
       <button onClick={playAgain}>Play Again</button>
     </div>
   </div>
