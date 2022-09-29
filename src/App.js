@@ -51,7 +51,7 @@ function App() {
     setCorrectLetters([]);
     setWrongLetters([]);
 
-    const random = Math.floow(Math.random() * words.length);
+    const random = Math.floor(Math.random() * words.length);
     selectedWord = words[random];
   }
 
