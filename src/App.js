@@ -9,7 +9,50 @@ import React, {useState, useEffect} from 'react'
 import { showNotification as show } from './helpers/helper';
 import Footer from './components/Footer';
 
-const words = ['american', 'asiago', 'blue', 'bocconcini', 'brie', 'burrata', 'camembert', 'cheddar', 'cheesecurds', 'colby', 'colbyjack', 'coldpack', 'cotija', 'cottagecheese', 'creamcheese', 'emmental', 'edam', 'farmerscheese', 'feta', 'freshmozzarella', 'gorgonzola', 'goat', 'gouda', 'gruyere', 'halloumi', 'havarti', 'jarlsberg', 'limburger', 'marscarpone', 'montereyjack', 'mozzarella', 'muenster', 'neufchatel', 'paneer', 'parmesan', 'pepperjack', 'provolone', 'ricotta', 'romano', 'string', 'swiss' ];
+const words = [
+  'american', 
+  'asiago', 
+  'blue', 
+  'bocconcini', 
+  'brie', 
+  'burrata', 
+  'camembert', 
+  'cheddar', 
+  'cheesecurds', 
+  'colby', 
+  'colbyjack', 
+  'coldpack', 
+  'cotija', 
+  'cottagecheese', 
+  'creamcheese', 
+  'emmental', 
+  'edam', 
+  'farmerscheese', 
+  'feta', 
+  'freshmozzarella', 
+  'gorgonzola', 
+  'goat', 
+  'gouda', 
+  'gruyere', 
+  'halloumi', 
+  'havarti', 
+  'jarlsberg', 
+  'limburger', 
+  'marscarpone', 
+  'montereyjack', 
+  'mozzarella', 
+  'muenster', 
+  'neufchatel', 
+  'paneer', 
+  'parmesan', 
+  'pepperjack', 
+  'provolone', 
+  'ricotta', 
+  'romano', 
+  'string', 
+  'swiss' 
+];
+
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 let playable = true;
@@ -23,7 +66,7 @@ function App() {
   useEffect(() => {
     const handleKeydown = event => {
       const { key, keyCode} = event;
-      if (playable && keyCode > 65 && keyCode < 90) {
+      if (playable && keyCode > 64 && keyCode < 90) {
         const letter = key.toLowerCase();
 
         if (selectedWord.includes(letter)) {
@@ -64,13 +107,17 @@ function App() {
       <Figure wrongLetters={wrongLetters}/>
       <WrongLetters wrongLetters={wrongLetters}/>
       <Word selectedWord={selectedWord} correctLetters={correctLetters}/>
-      
-    </div>
       <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord
       } setPlayable={setPlayable} playAgain={playAgain} />
-      <Notification showNotification={showNotification}/>
+
+    </div>
+    <div>
+      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord
+      } setPlayable={setPlayable} playAgain={playAgain} />
+      </div>
       <footer>
-        <Footer />
+        <Footer/>
+        <Notification showNotification={showNotification}/>
       </footer>
     </>
   );
