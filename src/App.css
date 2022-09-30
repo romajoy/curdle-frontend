@@ -2,13 +2,15 @@
   box-sizing: border-box;
 }
 
-.curdle-title {
+/* .curdle-title {
   font-family: 'Lobster', cursive;
-  font-size: 3em;
-}
+  font-size: 4em;
+  text-align: center;
+} */
 
 .play-prompt {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
 body {
@@ -26,6 +28,9 @@ body {
 
 h1 {
   margin: 20px 0 0;
+  font-family: 'Lobster', cursive;
+  font-size: 4em;
+  text-align: center;
 }
 
 .game-container {
@@ -73,7 +78,7 @@ h1 {
 }
 
 .letter {
-  border-bottom: 3px solid #eac315;
+  border-bottom: 3px solid #f7cf04;
   display: inline-flex;
   font-size: 30px;
   align-items: center;
@@ -120,6 +125,39 @@ h1 {
 
 .popup button:focus {
   outline: 0;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+Footer {
+  margin-top: 3em;
+}
+
+.wrong-letters {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color:#efb122cd;
+  width: 100vw;
+  margin-bottom: 0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color:#228fefcd;
+  text-shadow: white;
+  text-decoration: underline;
 }
 
 .notification-container {

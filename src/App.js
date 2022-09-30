@@ -7,6 +7,8 @@ import Popup from './components/Popup';
 import Notification from './components/Notification';
 import React, {useState, useEffect} from 'react'
 import { showNotification as show } from './helpers/helper';
+import Footer from './components/Footer';
+import useWindowSize from 'react-use/lib/useWindowSize';
 
 const words = ['american', 'asiago', 'blue', 'bocconcini', 'brie', 'burrata', 'camembert', 'cheddar', 'cheesecurds', 'colby', 'colbyjack', 'coldpack', 'cotija', 'cottagecheese', 'creamcheese', 'emmental', 'edam', 'farmerscheese', 'feta', 'freshmozzarella', 'gorgonzola', 'goat', 'gouda', 'gruyere', 'halloumi', 'havarti', 'jarlsberg', 'limburger', 'marscarpone', 'montereyjack', 'mozzarella', 'muenster', 'neufchatel', 'paneer', 'parmesan', 'pepperjack', 'provolone', 'ricotta', 'romano', 'string', 'swiss' ];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -66,8 +68,11 @@ function App() {
       
     </div>
       <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord
-      } setPlayable={setPlayable} playAgain={playAgain}/>
+      } setPlayable={setPlayable} playAgain={playAgain} />
       <Notification showNotification={showNotification}/>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
