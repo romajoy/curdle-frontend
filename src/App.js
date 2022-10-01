@@ -8,6 +8,10 @@ import Notification from './components/Notification';
 import React, {useState, useEffect} from 'react'
 import { showNotification as show } from './helpers/helper';
 import Footer from './components/Footer';
+import axios from 'axios';
+
+
+const API_URL = "http://localhost:3000/api/v1/cheese";
 
 const words = [
   'american', 
@@ -58,6 +62,7 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
 let playable = true;
 
 function App() {
+  // const [word, setCheese] = useState([])
   const [playable, setPlayable] = useState(true);
   const [correctLetters, setCorrectLetters] = useState([])
   const [wrongLetters, setWrongLetters] = useState([])
