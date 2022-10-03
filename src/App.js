@@ -8,10 +8,14 @@ import Notification from './components/Notification';
 import React, {useState, useEffect} from 'react'
 import { showNotification as show } from './helpers/helper';
 import Footer from './components/Footer';
-import axios from 'axios';
+// import axios from 'axios';
+// import Cheese from './components/Cheese'
 
+// const API_URL = "http://localhost:3000/api/v1/cheeses";
 
-const API_URL = "http://localhost:3000/api/v1/cheese";
+// function getAPIData () {
+//   return axios.get(API_URL).then((response) => response.data)
+// }
 
 const words = [
   'american', 
@@ -62,13 +66,21 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
 let playable = true;
 
 function App() {
-  // const [word, setCheese] = useState([])
+  const [words, setWords] = useState([]) 
   const [playable, setPlayable] = useState(true);
   const [correctLetters, setCorrectLetters] = useState([])
   const [wrongLetters, setWrongLetters] = useState([])
   const [showNotification, setShowNotification] = useState(false)
 
   useEffect(() => {
+
+    // let mounted = true;
+    // getAPIData().then(items) => {
+    //   if (mounted) {
+    //     setWords(items)
+    //   }
+    // }
+
     const handleKeydown = event => {
       const { key, keyCode} = event;
       if (playable && keyCode >= 65 && keyCode <= 90) {
