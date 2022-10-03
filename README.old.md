@@ -2,10 +2,10 @@
 **Capstone Project for GA SEIR Cohort**
 
 ## Links
-[Front End Repo] (https://github.com/romajoy/curdle-frontend) 
+[Front End Repo] (https://github.com/romajoy/curdle-frontend)      
 [Back End Repo] (https://github.com/romajoy/curdle-backend) 
      
-[Curdle App (front)]  (https://curdle-project.onrender.com/)
+[Curdle App (front)]  (https://curdle-project.onrender.com/)     
 [Curdle Backend] (https://curdle-backend.herokuapp.com/)
 
 ### Technology Used
