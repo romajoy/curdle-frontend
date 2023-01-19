@@ -63,11 +63,10 @@ const words = [
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-let playable = true;
 
 function App() {
   const [words, setWords] = useState([]) 
-  const [playable, setPlayable] = useState(true);
+  const [playable, setPlayable] = useState(false);
   const [correctLetters, setCorrectLetters] = useState([])
   const [wrongLetters, setWrongLetters] = useState([])
   const [showNotification, setShowNotification] = useState(false)
